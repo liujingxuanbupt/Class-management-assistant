@@ -1,0 +1,11 @@
+<view class="header">
+<text>登陆</text>
+</view>
+<view>
+<i-input bind:change='inputName' maxlength="15" title="账号"
+ placeholder="请输入账号" />
+<i-input bind:change='inputPassword' maxlength="15" 
+title="密码" type="password" placeholder="请输入密码" />
+<i-button bindtap='login' type="primary">登录</i-button>
+<i-button bindtap='register' type="success">注册</i-button>
+</view>

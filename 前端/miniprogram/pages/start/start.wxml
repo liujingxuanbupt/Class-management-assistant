@@ -1,0 +1,11 @@
+<view class='page-layout'>
+  <view class='logo-layout'>
+    <image class='logo' src='/images/minilogo.png'></image>
+    <text>班级管理助手</text>
+  </view>
+</view>
+ 
+<view>
+  <button class="buttonmargin" bindtap="login" type="primary" >登陆</button>
+  <button class="buttonmargin" bindtap="register" type="default" >注册</button>
+</view>

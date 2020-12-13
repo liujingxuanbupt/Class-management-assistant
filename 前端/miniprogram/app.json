@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/userInfo/userInfo",
+    "pages/message/message",
+    "pages/userSelect/userSelect",
+    "pages/setting/setting",
+    "pages/record/record"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "班级管理助手",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "/images/bar_1.png",
+        "iconPath": "/images/bar_1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/images/bar_2.png",
+        "iconPath": "/images/bar_2.png",
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      },
+      {
+        "selectedIconPath": "/images/bar_4.png",
+        "iconPath": "/images/bar_4.png",
+        "pagePath": "pages/userInfo/userInfo",
+        "text": "我的"
+      }
+    ]
+  }
+}

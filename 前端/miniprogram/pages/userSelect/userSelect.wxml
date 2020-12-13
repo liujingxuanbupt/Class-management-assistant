@@ -1,0 +1,7 @@
+<i-panel title="选择">
+    <i-checkbox-group current="{{current}}" bindchange="handleChange">
+        <i-checkbox wx:for="{{student}}" position="left" value="{{item.yourName}}">
+        </i-checkbox>
+    </i-checkbox-group>
+</i-panel>
+<button bindtap="userSelect">确认</button>

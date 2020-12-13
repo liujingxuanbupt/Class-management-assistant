@@ -1,0 +1,31 @@
+<view class='amountBg'>
+  <view class='img'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class='account'>
+    <view class='nick-name'>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+    <view class='address'>
+      <text type="userCountry">{{userInfo}}</text>
+    </view>
+  </view>
+</view>
+<view class="text_image">
+      <image class="png" src="../../images/usermgs.png"></image>
+      <text class="text">我的班级</text>
+    </view>
+<text class="text">您现在的班级为:{{classNumber}}</text>
+<i-button bindtap="modalinput" type="info">创建/加入班级</i-button>
+<modal hidden="{{hiddenmodalput}}" title="请输入班级号" confirm-text="确认" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+<input bindinput="input" type='text' placeholder="请在此输入"/>  </modal>  
+<view class="text_image" bindtap="goSetting">
+      <image class="png" src="../../images/watch-life-logo-80.jpg"></image>
+      <text class="text">Timer设置</text>
+      <image class="in" src="../../images/in.png"></image>
+    </view>
+    <view class="text_image" bindtap="goRecord">
+      <image class="png" src="../../images/bar_3.png"></image>
+      <text class="text">Timer记录</text>
+      <image class="in" src="../../images/in.png"></image>
+    </view>

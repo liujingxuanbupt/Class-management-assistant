@@ -1,0 +1,8 @@
+<!--miniprogram/pages/register/register.wxml-->
+<view>
+
+<i-input bind:change='inputName' maxlength="15" title="用户名" autofocus placeholder="请输入用户名" />
+<i-input bind:change='inputPassword' type="password" maxlength="15" title="密码" autofocus placeholder="请输入密码" />
+<i-input bind:change='inputNumber' maxlength="10" title="学号" autofocus placeholder="请输入学号" />
+<i-button bindtap="register" type="success" shape="circle">注册</i-button>
+</view>

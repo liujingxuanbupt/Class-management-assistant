@@ -1,0 +1,50 @@
+<view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>发布</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>通知</view>
+
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+  <swiper-item>
+  <form bindsubmit="formSubmit">  
+  <view>标题:</view>
+  <input name="title" class="weui-input" value='{{blank}}' placeholder="请在此输入通知标题" />
+  <view>内容：</view>
+  <input name="content" class="weui-input" value='{{blank}}' placeholder="请在此输入通知内容" />
+  <view>重要程度</view>
+  <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.name}}" checked="true"/>
+          </view>
+          <view class="weui-cell__bd">{{item.value}}</view>
+        </label>
+      </radio-group>
+    </view>
+    <view class="text_image" bindtap='userSelect'>
+      <image class="png" src="../../images/message.png"></image>
+      <text class="text">选择对象</text>
+      <image class="in" src="../../images/in.png"></image></view>
+  <button class="button01" type="primary" form-type="submit">发布</button>
+</form>
+<image class="png" src="../../images/bar_3.png"></image>
+      <text class="text">班级当前状态</text>
+<view class="text1">当前班级中</view>
+<view>有{{workNum}}人正在工作</view>
+<view>有{{restNum}}人正在休息</view>
+</swiper-item> 
+  <swiper-item>
+    <block wx:for="{{notice}}" data-item="item" wx:for-index="idx" >
+  <view>
+    Notice No.{{idx+1}}
+  </view>
+  <view class="title">标题:{{item.title}}</view>
+  <view class="wenben">发布时间：{{item.time}}</view>
+  <view class="zhengwen">内容：{{item.content}}</view>
+  <view class="wenben">发布人：{{item.userInfo}}</view>
+  <view class="star1"></view>
+</block>
+<i-load-more tip="暂无更多数据" loading="{{ false }}" />
+  </swiper-item>
+  <view class='liner'></view>
+</swiper>
